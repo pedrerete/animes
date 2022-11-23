@@ -1,0 +1,2 @@
+agregar una nav bar funcional
+agregar minimo 3 paginas diferentes donde se pueda navegar
