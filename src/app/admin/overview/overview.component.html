@@ -1,0 +1,37 @@
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+   <h1>Total de animes = {{this.animes.length}}</h1>
+   <p>Api utilizada: {{this.data.url}}</p>
+  <table>
+    <tr>
+      <th scope="col" *ngFor="let head of animeElements">{{head}}</th>
+    </tr>
+    <tr *ngFor="let anime of animes">  
+      <td> <a href="{{ baseUrl }}{{anime.node.id}}" target="_blank">
+        {{anime.node.id}}
+       </a></td>
+      <td>{{ anime.node.title }}</td>
+      <td>{{ anime.list_status.status }}</td>
+      <td>{{ anime.list_status.score }}</td>
+      
+      
+  
+    </tr>
+  </table>
+   
+  

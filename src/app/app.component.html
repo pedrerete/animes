@@ -1,36 +1,22 @@
-<style>
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-  </style>
- <h1>Total de animes = {{this.animes.length}}</h1>
- <p>Api utilizada: {{this.data.url}}</p>
-<table>
-  <tr>
-    <th scope="col" *ngFor="let head of animeElements">{{head}}</th>
-  </tr>
-  <tr *ngFor="let anime of animes">  
-    <td> <a href="{{ baseUrl }}{{anime.node.id}}" target="_blank">
-      {{anime.node.id}}
-     </a></td>
-    <td>{{ anime.node.title }}</td>
-    <td>{{ anime.list_status.status }}</td>
-    <td>{{ anime.list_status.score }}</td>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Admin Panel</a>
     
-    
-
-  </tr>
-</table>
- 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+         
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#Inicio" routerLink="/Inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#overview" routerLink="/overview">Overview</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+     
+  <div class="container">
+      <router-outlet></router-outlet>
+  </div>
